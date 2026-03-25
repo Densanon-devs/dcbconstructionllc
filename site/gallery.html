@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our portfolio of completed kitchen remodels, bathroom renovations, tile work, flooring, and more across Northern Idaho.">
+  <title>Project Gallery | DCB Construction LLC</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============================================
+       Header
+       ============================================ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">DCB Construction <span>LLC</span></a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="nav-dropdown">
+            <a href="services/index.html">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="services/kitchen-remodeling.html">Kitchen Remodeling</a></li>
+              <li><a href="services/bathroom-remodeling.html">Bathroom Remodeling</a></li>
+              <li><a href="services/walk-in-showers.html">Walk-In Showers</a></li>
+              <li><a href="services/tile-installation.html">Tile Installation</a></li>
+              <li><a href="services/flooring.html">Flooring</a></li>
+              <li><a href="services/in-floor-heating.html">In-Floor Heating</a></li>
+              <li><a href="services/trim-finishing.html">Trim &amp; Finishing</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="areas/coeur-d-alene.html">Areas</a>
+            <ul class="dropdown-menu">
+              <li><a href="areas/coeur-d-alene.html">Coeur d'Alene</a></li>
+              <li><a href="areas/post-falls.html">Post Falls</a></li>
+              <li><a href="areas/hayden.html">Hayden</a></li>
+              <li><a href="areas/athol.html">Athol</a></li>
+              <li><a href="areas/sandpoint.html">Sandpoint</a></li>
+            </ul>
+          </li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html" class="header-cta header-cta-desktop">Free Estimate</a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================
+       Page Hero
+       ============================================ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Gallery</span>
+      </div>
+      <h1>Our Work</h1>
+      <p>Browse our portfolio of completed projects across Northern Idaho.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Gallery Section
+       ============================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Portfolio</span>
+        <h2>Featured Projects</h2>
+        <p>From full kitchen remodels to detailed tile work, take a look at the craftsmanship we bring to every job.</p>
+      </div>
+
+      <!-- Gallery Filters -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="kitchens">Kitchens</button>
+        <button class="filter-btn" data-filter="bathrooms">Bathrooms</button>
+        <button class="filter-btn" data-filter="showers">Showers</button>
+        <button class="filter-btn" data-filter="tile">Tile</button>
+        <button class="filter-btn" data-filter="flooring">Flooring</button>
+        <button class="filter-btn" data-filter="trim">Trim</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+
+        <!-- Kitchen 1 -->
+        <div class="gallery-item" data-category="kitchens">
+          <div class="placeholder-img">Kitchen Remodel — Coeur d'Alene</div>
+          <div class="overlay">
+            <p>Full kitchen renovation with custom cabinetry and quartz countertops</p>
+          </div>
+        </div>
+
+        <!-- Bathroom 1 -->
+        <div class="gallery-item" data-category="bathrooms">
+          <div class="placeholder-img">Bathroom Renovation — Post Falls</div>
+          <div class="overlay">
+            <p>Master bathroom remodel with double vanity and heated floors</p>
+          </div>
+        </div>
+
+        <!-- Shower 1 -->
+        <div class="gallery-item" data-category="showers">
+          <div class="placeholder-img">Walk-In Shower — Hayden</div>
+          <div class="overlay">
+            <p>Custom walk-in shower with frameless glass door and built-in niche</p>
+          </div>
+        </div>
+
+        <!-- Tile 1 -->
+        <div class="gallery-item" data-category="tile">
+          <div class="placeholder-img">Tile Backsplash — Coeur d'Alene</div>
+          <div class="overlay">
+            <p>Herringbone pattern subway tile backsplash with accent strip</p>
+          </div>
+        </div>
+
+        <!-- Kitchen 2 -->
+        <div class="gallery-item" data-category="kitchens">
+          <div class="placeholder-img">Kitchen Update — Sandpoint</div>
+          <div class="overlay">
+            <p>Open-concept kitchen redesign with island and pendant lighting</p>
+          </div>
+        </div>
+
+        <!-- Bathroom 2 -->
+        <div class="gallery-item" data-category="bathrooms">
+          <div class="placeholder-img">Guest Bathroom — Athol</div>
+          <div class="overlay">
+            <p>Complete guest bathroom overhaul with modern fixtures and tile surround</p>
+          </div>
+        </div>
+
+        <!-- Flooring -->
+        <div class="gallery-item" data-category="flooring">
+          <div class="placeholder-img">Hardwood Flooring — Sandpoint</div>
+          <div class="overlay">
+            <p>Engineered hardwood installation throughout main living areas</p>
+          </div>
+        </div>
+
+        <!-- Shower 2 -->
+        <div class="gallery-item" data-category="showers">
+          <div class="placeholder-img">Tiled Shower — Post Falls</div>
+          <div class="overlay">
+            <p>Large-format porcelain tile shower with linear drain and bench seat</p>
+          </div>
+        </div>
+
+        <!-- Kitchen 3 -->
+        <div class="gallery-item" data-category="kitchens">
+          <div class="placeholder-img">Kitchen Remodel — Athol</div>
+          <div class="overlay">
+            <p>Rustic farmhouse kitchen with shaker cabinets and butcher block island</p>
+          </div>
+        </div>
+
+        <!-- Tile 2 -->
+        <div class="gallery-item" data-category="tile">
+          <div class="placeholder-img">Fireplace Tile — Hayden</div>
+          <div class="overlay">
+            <p>Floor-to-ceiling natural stone tile fireplace surround</p>
+          </div>
+        </div>
+
+        <!-- Bathroom 3 -->
+        <div class="gallery-item" data-category="bathrooms">
+          <div class="placeholder-img">Bathroom Suite — Coeur d'Alene</div>
+          <div class="overlay">
+            <p>Luxury master suite with freestanding tub and custom vanity</p>
+          </div>
+        </div>
+
+        <!-- Trim -->
+        <div class="gallery-item" data-category="trim">
+          <div class="placeholder-img">Trim Carpentry — Post Falls</div>
+          <div class="overlay">
+            <p>Crown molding, baseboards, and window casing throughout a new build</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA Banner
+       ============================================ -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Like What You See?</h2>
+      <p>Let us bring this level of craftsmanship to your home. Get started with a free estimate.</p>
+      <div class="btn-group">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get Your Free Estimate</a>
+        <a href="tel:+14257370645" class="btn btn-secondary btn-lg">Call (425) 737-0645</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Footer
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: About -->
+        <div class="footer-col footer-about">
+          <h4>DCB Construction <span style="color: var(--color-accent);">LLC</span></h4>
+          <p>Quality craftsmanship in Northern Idaho. We specialize in kitchen and bathroom remodeling, tile installation, flooring, and custom finishing work for homeowners across the Coeur d'Alene region.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/p/DCB-Construction-LLC-100063575410269/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Yelp">YP</a>
+            <a href="#" aria-label="Google">G</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services/index.html">Services</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Our Services -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services/kitchen-remodeling.html">Kitchen Remodeling</a></li>
+            <li><a href="services/bathroom-remodeling.html">Bathroom Remodeling</a></li>
+            <li><a href="services/walk-in-showers.html">Walk-In Showers</a></li>
+            <li><a href="services/tile-installation.html">Tile Installation</a></li>
+            <li><a href="services/flooring.html">Flooring</a></li>
+            <li><a href="services/in-floor-heating.html">In-Floor Heating</a></li>
+            <li><a href="services/trim-finishing.html">Trim &amp; Finishing</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Service Areas + Contact -->
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="areas/coeur-d-alene.html">Coeur d'Alene</a></li>
+            <li><a href="areas/post-falls.html">Post Falls</a></li>
+            <li><a href="areas/hayden.html">Hayden</a></li>
+            <li><a href="areas/athol.html">Athol</a></li>
+            <li><a href="areas/sandpoint.html">Sandpoint</a></li>
+          </ul>
+          <p style="margin-top: 1.25rem;"><a href="tel:+14257370645" style="color: var(--color-accent);">(425) 737-0645</a></p>
+          <p><a href="mailto:Dcbconstructionllccda@gmail.com" style="color: rgba(255,255,255,0.6);">Dcbconstructionllccda@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 DCB Construction LLC. All rights reserved.</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
