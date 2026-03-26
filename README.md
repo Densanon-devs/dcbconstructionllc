@@ -9,7 +9,7 @@
 
 ## About the Client
 
-DCB Construction LLC is a remodeling contractor serving Northern Idaho (Coeur d'Alene, Post Falls, Hayden, Sandpoint). They specialize in kitchen and bathroom remodeling, tile installation, flooring, walk-in/curbless showers, in-floor heating, and trim/finishing work.
+DCB Construction LLC is a remodeling contractor serving Northern Idaho (Coeur d'Alene, Post Falls, Hayden). They specialize in kitchen and bathroom remodeling, tile installation, flooring, walk-in/curbless showers, in-floor heating, and trim/finishing work.
 
 ## Document Navigation
 
