@@ -11,7 +11,7 @@
 - Flooring services (hardwood, laminate, vinyl, tile)
 - In-floor heating installation
 - Trim, casing, and finishing services
-- Service area pages (Coeur d'Alene, Post Falls, Hayden, Athol, Sandpoint)
+- Service area pages (Coeur d'Alene, Post Falls, Hayden, Sandpoint)
 - Localized SEO content targeting each service area
 - "About Us" section describing craftsmanship and specialization
 - Clear value propositions (quality, communication, local trust)
@@ -37,7 +37,6 @@
 | Coeur d'Alene | | | | | |
 | Post Falls | | | | | |
 | Hayden | | | | | |
-| Athol | | | | | |
 | Sandpoint | | | | | |
 
 ## About Us / Value Proposition Analysis

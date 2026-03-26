@@ -18,7 +18,6 @@
 | Coeur d'Alene | | | | | | |
 | Post Falls | | | | | | |
 | Hayden | | | | | | |
-| Athol | | | | | | |
 | Sandpoint | | | | | | |
 
 ## Local SEO Signals

@@ -16,7 +16,7 @@
 | Flooring services (hardwood, laminate, vinyl, tile) | | |
 | In-floor heating installation | | |
 | Trim, casing, and finishing services | | |
-| Service area pages (CDA, Post Falls, Hayden, Athol, Sandpoint) | | |
+| Service area pages (CDA, Post Falls, Hayden, Sandpoint) | | |
 | Localized SEO content per service area | | |
 | "About Us" section (craftsmanship, specialization) | | |
 | Clear value propositions (quality, communication, local trust) | | |

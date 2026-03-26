@@ -23,7 +23,6 @@
 | contractor coeur d'alene | | | | |
 | remodeling post falls idaho | | | | |
 | bathroom remodel hayden | | | | |
-| home renovation athol idaho | | | | |
 | remodeling contractor sandpoint | | | | |
 
 ### Long-Tail Keywords
