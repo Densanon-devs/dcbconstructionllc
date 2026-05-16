@@ -1,0 +1,11 @@
+credentials.local.md
+backup/
+
+# WP-scrape byproducts from extracting Quality Resource's old WordPress install.
+# Not site content — would hurt SEO if served (sitemaps point at WP URLs).
+wp-json-root.json
+media-index.json
+posts-index.json
+category-sitemap.xml
+local-sitemap.xml
+page-sitemap.xml
