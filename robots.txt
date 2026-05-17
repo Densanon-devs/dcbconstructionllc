@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://densanon-devs.github.io/dcbconstructionllc/sitemap.xml
