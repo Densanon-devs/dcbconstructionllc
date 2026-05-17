@@ -62,7 +62,7 @@ Status as of 2026-05-08. Phase 1 + Phase 2 are done; Phase 3 + Phase 4 are pendi
 | 5.1 | Citation cleanup — NAP consistency | Verify name/address/phone match on BBB ✓, Yelp, Houzz, Angi, Thumbtack |
 | 5.2 | Get more real photos for in-floor heating + trim-finishing | Ask David; add to those 2 service pages once received |
 | 5.3 | Review acquisition campaign | Email past customers asking for Google reviews; target 10+ to lift the GBP listing |
-| 5.4 | Add `sitemap.xml` and `robots.txt` | Trivial, do once domain is live |
+| 5.4 | Add `sitemap.xml` and `robots.txt` | ✅ Done 2026-05-16 (commit `587770d`). 22 URLs, currently absolute to `densanon-devs.github.io/dcbconstructionllc`; regenerate with find/replace at custom-domain cutover |
 | 5.5 | Service+city combo pages for additional services | Walk-in showers, tile installation are the next-most-searched. 3 cities × 2 services = 6 more potential pages |
 | 5.6 | Before/after sliders on gallery | Once we have before/after pairs from real projects |
 
