@@ -165,6 +165,7 @@
 
       <div class="footer-bottom">
         <p>&copy; ${year} DCB Construction LLC. All rights reserved. Idaho License RCE-52572.</p>
+        <p><a href="${root}privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="${root}terms.html">Terms of Use</a></p>
       </div>
     </div>`;
 
