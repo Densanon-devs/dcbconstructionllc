@@ -48,7 +48,9 @@
 
     injectHeader(root, active);
     injectFooter(root);
-    injectFloatingCall();
+    if (!config.hideFloatingCall) {
+      injectFloatingCall();
+    }
     initNavInteractions();
   };
 
