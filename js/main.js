@@ -165,4 +165,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // --- Scroll-triggered reveal animations ---
+  // Adds .is-visible the first time a [data-reveal] element scrolls into view,
+  // then stops observing. Skipped if the user prefers reduced motion (CSS also
+  // defends; skipping the observer saves cycles).
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if (revealEls.length && !reduceMotion && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries, obs) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el) { observer.observe(el); });
+  } else if (revealEls.length) {
+    revealEls.forEach(function(el) { el.classList.add('is-visible'); });
+  }
+
 });
