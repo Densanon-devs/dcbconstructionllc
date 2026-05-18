@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bridge for crawlers that learned about /sitemap_index.xml from the old
+     WordPress install (Rank Math / Yoast convention). Points at the single
+     flat sitemap that lists all current URLs. -->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://dcbconstructionllc.com/sitemap.xml</loc>
+    <lastmod>2026-05-18</lastmod>
+  </sitemap>
+</sitemapindex>
