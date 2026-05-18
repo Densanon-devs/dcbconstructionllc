@@ -37,6 +37,10 @@
   const PHONE_TEL     = 'tel:+14257370645';
   const EMAIL         = 'Dcbconstructionllccda@gmail.com';
   const FACEBOOK_URL  = 'https://www.facebook.com/p/DCB-Construction-LLC-100063575410269/';
+  // GOOGLE_PROFILE_URL: temporary fallback to a Maps search until the real GBP
+  // profile share URL is dropped in. Search for "GOOGLE_PROFILE_URL" or
+  // "GOOGLE_REVIEW_URL" across the repo to find the other two placeholders.
+  const GOOGLE_PROFILE_URL = "https://www.google.com/maps/search/?api=1&query=DCB+Construction+LLC+5550+N+Anne+St+Coeur+d%27Alene+ID";
 
   // ---- Public entry ----
 
@@ -133,6 +137,7 @@
           <p>Quality craftsmanship in Northern Idaho. We specialize in kitchen and bathroom remodeling, tile installation, flooring, and custom finishing work for homeowners across the Coeur d'Alene region.</p>
           <div class="footer-social">
             <a href="${FACEBOOK_URL}" aria-label="Facebook" target="_blank" rel="noopener noreferrer">FB</a>
+            <a href="${GOOGLE_PROFILE_URL}" aria-label="Google Business Profile" target="_blank" rel="noopener noreferrer">G</a>
           </div>
         </div>
 
