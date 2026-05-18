@@ -36,52 +36,7 @@
 </head>
 <body>
 
-  <!-- ============ Header ============ -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="../index.html" class="logo">DCB Construction <span>LLC</span></a>
-
-      <nav class="main-nav">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li class="nav-dropdown">
-            <a href="../services/kitchen-remodeling.html">Services</a>
-            <ul class="dropdown-menu">
-              <li><a href="../services/kitchen-remodeling.html">Kitchen Remodeling</a></li>
-              <li><a href="../services/bathroom-remodeling.html">Bathroom Remodeling</a></li>
-              <li><a href="../services/walk-in-showers.html">Walk-In Showers</a></li>
-              <li><a href="../services/tile-installation.html">Tile Installation</a></li>
-              <li><a href="../services/flooring.html">Flooring</a></li>
-              <li><a href="../services/in-floor-heating.html">In-Floor Heating</a></li>
-              <li><a href="../services/trim-finishing.html">Trim &amp; Finishing</a></li>
-            </ul>
-          </li>
-          <li class="nav-dropdown">
-            <a href="post-falls.html" class="active">Areas</a>
-            <ul class="dropdown-menu">
-              <li><a href="coeur-d-alene.html">Coeur d'Alene</a></li>
-              <li><a href="post-falls.html">Post Falls</a></li>
-              <li><a href="hayden.html">Hayden</a></li>
-            </ul>
-          </li>
-          <li><a href="../reviews.html">Reviews</a></li>
-          <li><a href="../gallery.html">Gallery</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <a href="../contact.html" class="header-cta header-cta-desktop">Free Estimate</a>
-
-      <button class="menu-toggle" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- ============ Page Hero ============ -->
+<!-- ============ Page Hero ============ -->
   <section class="page-hero">
     <div class="container">
       <div class="breadcrumb">
@@ -320,64 +275,8 @@
     </div>
   </section>
 
-  <!-- ============ Footer ============ -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Column 1: About -->
-        <div class="footer-col footer-about">
-          <h4>DCB Construction <span style="color: var(--color-accent);">LLC</span></h4>
-          <p>Quality craftsmanship in Northern Idaho. We specialize in kitchen and bathroom remodeling, tile installation, flooring, and custom finishing work for homeowners across the Coeur d'Alene region.</p>
-          <div class="footer-social">
-            <a href="https://www.facebook.com/p/DCB-Construction-LLC-100063575410269/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">FB</a>
-          </div>
-        </div>
-
-        <!-- Column 2: Quick Links -->
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../reviews.html">Reviews</a></li>
-            <li><a href="../gallery.html">Gallery</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3: Our Services -->
-        <div class="footer-col">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="../services/kitchen-remodeling.html">Kitchen Remodeling</a></li>
-            <li><a href="../services/bathroom-remodeling.html">Bathroom Remodeling</a></li>
-            <li><a href="../services/walk-in-showers.html">Walk-In Showers</a></li>
-            <li><a href="../services/tile-installation.html">Tile Installation</a></li>
-            <li><a href="../services/flooring.html">Flooring</a></li>
-            <li><a href="../services/in-floor-heating.html">In-Floor Heating</a></li>
-            <li><a href="../services/trim-finishing.html">Trim &amp; Finishing</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Service Areas + Contact -->
-        <div class="footer-col">
-          <h4>Service Areas</h4>
-          <ul>
-            <li><a href="coeur-d-alene.html">Coeur d'Alene</a></li>
-            <li><a href="post-falls.html">Post Falls</a></li>
-            <li><a href="hayden.html">Hayden</a></li>
-          </ul>
-          <p style="margin-top: 1.25rem;"><a href="tel:+14257370645" style="color: var(--color-accent);">(425) 737-0645</a></p>
-          <p><a href="mailto:Dcbconstructionllccda@gmail.com" style="color: rgba(255,255,255,0.6);">Dcbconstructionllccda@gmail.com</a></p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 DCB Construction LLC. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
+  <script src="../js/page-consistency.js"></script>
+  <script>initPage({ depth: 1, activePage: 'areas' });</script>
+<script src="../js/main.js"></script>
 </body>
 </html>
