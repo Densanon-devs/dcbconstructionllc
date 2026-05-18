@@ -1360,6 +1360,17 @@ p { margin-bottom: 1rem; }
 }
 
 /* ============================================
+   Picture wrapper — keep layout transparent
+   ============================================ */
+/* <picture> wraps every <img> that has a WebP sibling. display:contents
+   makes the wrapper invisible to layout so the inner <img> still
+   inherits sizing from the parent (.gallery-item, .two-col-image, etc).
+*/
+picture {
+  display: contents;
+}
+
+/* ============================================
    Animations — hero stagger + scroll-reveal
    ============================================ */
 
