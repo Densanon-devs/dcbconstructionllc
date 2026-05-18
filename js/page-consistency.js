@@ -37,10 +37,8 @@
   const PHONE_TEL     = 'tel:+14257370645';
   const EMAIL         = 'Dcbconstructionllccda@gmail.com';
   const FACEBOOK_URL  = 'https://www.facebook.com/p/DCB-Construction-LLC-100063575410269/';
-  // GOOGLE_PROFILE_URL: temporary fallback to a Maps search until the real GBP
-  // profile share URL is dropped in. Search for "GOOGLE_PROFILE_URL" or
-  // "GOOGLE_REVIEW_URL" across the repo to find the other two placeholders.
-  const GOOGLE_PROFILE_URL = "https://www.google.com/maps/search/?api=1&query=DCB+Construction+LLC+5550+N+Anne+St+Coeur+d%27Alene+ID";
+  // GBP listing share URL.
+  const GOOGLE_PROFILE_URL = 'https://share.google/CpDnAjdtCnlxxiWwL';
 
   // ---- Public entry ----
 
