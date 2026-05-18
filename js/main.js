@@ -85,52 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // --- Contact Form Handling ---
-  var contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Basic validation
-      var valid = true;
-      var required = contactForm.querySelectorAll('[required]');
-      required.forEach(function(field) {
-        if (!field.value.trim()) {
-          field.style.borderColor = 'var(--color-error)';
-          valid = false;
-        } else {
-          field.style.borderColor = '';
-        }
-      });
-
-      // Email validation
-      var emailField = contactForm.querySelector('input[type="email"]');
-      if (emailField && emailField.value) {
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(emailField.value)) {
-          emailField.style.borderColor = 'var(--color-error)';
-          valid = false;
-        }
-      }
-
-      if (valid) {
-        // Show success message
-        var submitBtn = contactForm.querySelector('button[type="submit"]');
-        var originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Message Sent!';
-        submitBtn.style.background = 'var(--color-success)';
-        submitBtn.disabled = true;
-
-        setTimeout(function() {
-          submitBtn.textContent = originalText;
-          submitBtn.style.background = '';
-          submitBtn.disabled = false;
-          contactForm.reset();
-        }, 3000);
-      }
-    });
-  }
-
   // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
