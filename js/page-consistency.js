@@ -48,6 +48,7 @@
 
     injectHeader(root, active);
     injectFooter(root);
+    injectFloatingCall();
     initNavInteractions();
   };
 
@@ -168,6 +169,17 @@
     </div>`;
 
     document.body.append(footer);
+  }
+
+  // ---- Floating Call Now (mobile only via CSS) ----
+
+  function injectFloatingCall() {
+    const btn = document.createElement('a');
+    btn.className = 'floating-call';
+    btn.href = PHONE_TEL;
+    btn.setAttribute('aria-label', 'Call DCB Construction at ' + PHONE_DISPLAY);
+    btn.innerHTML = '<span class="floating-call-icon" aria-hidden="true">&#9742;</span><span class="floating-call-text">Call Now</span>';
+    document.body.append(btn);
   }
 
   // ---- Nav interactions (mobile menu, dropdowns, scroll, active link) ----

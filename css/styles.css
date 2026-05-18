@@ -1360,6 +1360,44 @@ p { margin-bottom: 1rem; }
 }
 
 /* ============================================
+   Floating "Call Now" — mobile only
+   ============================================ */
+.floating-call {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 90;
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  padding: 0.875rem 1.25rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.floating-call:hover,
+.floating-call:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  color: var(--color-primary);
+}
+.floating-call-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+@media (max-width: 768px) {
+  .floating-call {
+    display: inline-flex;
+  }
+}
+
+/* ============================================
    Picture wrapper — keep layout transparent
    ============================================ */
 /* <picture> wraps every <img> that has a WebP sibling. display:contents
