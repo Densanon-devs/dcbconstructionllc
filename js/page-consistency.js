@@ -102,7 +102,7 @@
 
       <a href="${PHONE_TEL}" class="header-cta header-cta-desktop">&#9742; ${PHONE_DISPLAY}</a>
 
-      <button class="menu-toggle" aria-label="Toggle navigation menu">
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -198,7 +198,9 @@
       menuToggle.addEventListener('click', function () {
         this.classList.toggle('active');
         mainNav.classList.toggle('open');
-        document.body.style.overflow = mainNav.classList.contains('open') ? 'hidden' : '';
+        const isOpen = mainNav.classList.contains('open');
+        this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
       });
     }
 
@@ -218,7 +220,7 @@
       if (window.innerWidth > 768) {
         document.querySelectorAll('.nav-dropdown').forEach(function (d) { d.classList.remove('open'); });
         if (mainNav)    mainNav.classList.remove('open');
-        if (menuToggle) menuToggle.classList.remove('active');
+        if (menuToggle) { menuToggle.classList.remove('active'); menuToggle.setAttribute('aria-expanded', 'false'); }
         document.body.style.overflow = '';
       }
     });

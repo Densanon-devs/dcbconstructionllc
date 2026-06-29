@@ -10,13 +10,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- FAQ Accordion ---
   const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(function (item) {
+  faqItems.forEach(function (item, i) {
     const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
     if (question) {
+      // Expose collapsible state to assistive tech.
+      question.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+      if (answer) {
+        if (!answer.id) answer.id = 'faq-answer-' + i;
+        question.setAttribute('aria-controls', answer.id);
+      }
       question.addEventListener('click', function () {
         const isOpen = item.classList.contains('open');
-        faqItems.forEach(function (other) { other.classList.remove('open'); });
-        if (!isOpen) item.classList.add('open');
+        faqItems.forEach(function (other) {
+          other.classList.remove('open');
+          const q = other.querySelector('.faq-question');
+          if (q) q.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          question.setAttribute('aria-expanded', 'true');
+        }
       });
     }
   });
@@ -26,9 +40,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const galleryItems = document.querySelectorAll('.gallery-item');
 
   filterBtns.forEach(function (btn) {
+    // Expose pressed state to assistive tech.
+    btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
     btn.addEventListener('click', function () {
-      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      filterBtns.forEach(function (b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       this.classList.add('active');
+      this.setAttribute('aria-pressed', 'true');
       const filter = this.getAttribute('data-filter');
 
       galleryItems.forEach(function (item) {
