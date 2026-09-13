@@ -1,103 +1,159 @@
 # DCB Construction LLC — Recommendations Roadmap
 
-Status as of 2026-05-08. Phase 1 + Phase 2 are done; Phase 3 + Phase 4 are pending.
+**Status as of 2026-09-12.** Phases 1–4 are complete. What remains is measurement,
+content depth, and citation work.
+
+> This file was frozen at 2026-05-08 for four months and had gone badly stale —
+> it still described the domain transfer as "in flight" long after it landed.
+> Every item below was re-verified against the live site on 2026-09-12 rather
+> than carried forward on trust.
 
 ---
 
-## Phase 1: Recovery (DONE 2026-05-04 → 2026-05-05)
+## Open work, in priority order
 
-| # | Item | Status |
-|---|---|---|
-| 1.1 | Secure wp-admin access from prior vendor | ✅ Logged in, password rotated, stored in `credentials.local.md` |
-| 1.2 | Full content backup before vendor shutdown | ✅ WP XML export + REST API extracts (22 pages, 2 posts) + 147 media files (105 MB) in `backup/` |
-| 1.3 | Identify domain registrar and lock state | ✅ Cloudflare Registrar (in Quality Resource's account); registered 2026-03-05; `clientTransferProhibited` (standard lock); ICANN 60-day lock expired 2026-05-04 |
-| 1.4 | Triage media — separate real customer photos from stock/stolen | ✅ 30 customer-only retained, 117 stock/duplicates rejected |
+### P0 — Measurement (blocks everything else)
 
----
-
-## Phase 2: Static Site Rebuild (DONE 2026-05-04 → 2026-05-08)
-
-| # | Item | Status |
-|---|---|---|
-| 2.1 | Replace placeholder image divs with real photos across all pages | ✅ index, about, gallery, services/index, all 3 area pages |
-| 2.2 | Rebuild gallery.html with 30 real photos in 5 categories | ✅ Kitchens (2), Bathrooms (12), Showers (4), Tile (6), Flooring (3); fabricated city/description copy removed |
-| 2.3 | Add "Recent Projects" gallery sections to service pages | ✅ Kitchen, Bathroom, Walk-in Showers, Tile, Flooring (5/7). In-floor heating + trim-finishing skipped — no photos available |
-| 2.4 | Hero image on index.html | ✅ `walkin-shower-02.jpg` background with dark overlay |
-| 2.5 | Remove blog (6 fake teaser cards + 2 AI-generated articles) | ✅ Deleted `blog.html`, stripped 18 nav references across 16 files |
-| 2.6 | LocalBusiness/GeneralContractor JSON-LD on index.html | ✅ NAP, hours, license RCE-52572, service area (5 counties + 3 cities), services catalog, BBB + Facebook sameAs |
-| 2.7 | FAQPage JSON-LD on all 7 service pages | ✅ 32 Q/A pairs auto-extracted and injected |
-| 2.8 | 6 service+city combo pages | ✅ kitchen×{CDA, PF, Hayden} + bathroom×{CDA, PF, Hayden} — each with unique intro, area context, photo gallery, 4 city-specific FAQs, Service+FAQPage schema |
-| 2.9 | Cross-link combo pages from service hubs and area pages | ✅ Both directions wired |
-
----
-
-## Phase 3: Takeover (IN FLIGHT, 2026-05-06 → ?)
-
-| # | Item | Status / Blocker |
-|---|---|---|
-| 3.1 | Get EPP / auth code from Quality Resource | 🟡 Committed to Friday 2026-05-08 (today). Escalation path: registrar-abuse@cloudflare.com → ICANN Transfer Dispute Resolution Process |
-| 3.2 | Initiate domain transfer to David's own registrar account | ⏳ Blocked on 3.1 |
-| 3.3 | File Google Business Profile "Request Access" | ⏳ Not yet done. Most-leverage outstanding move. 7-day auto-transfer at business.google.com |
-| 3.4 | Pre-pick backup domain (don't register yet) | ⏳ E.g. `dcbconstructioncda.com`. Register only if QR misses Friday deadline (registering early signals to QR you're walking) |
-| 3.5 | Confirm all final invoices with QR are settled | ⏳ Document in writing |
-
----
-
-## Phase 4: Cutover + Polish (BLOCKED on Phase 3)
-
-| # | Item | Notes |
-|---|---|---|
-| 4.1 | Update `CNAME` from `testsite.densanon.com` to `dcbconstructionllc.com` | After domain transfer completes (typically 5–7 days post-EPP) |
-| 4.2 | Configure GitHub Pages custom domain + HTTPS | Settings → Pages → Custom domain |
-| 4.3 | Verify Google Search Console for `dcbconstructionllc.com` | Submit sitemap (need to generate `sitemap.xml`) |
-| 4.4 | Set up Google Analytics 4 | Add GA4 tag to all pages via shared snippet or `<head>` injection |
-| 4.5 | Test contact form delivery in production | Currently MetForm-style form on contact page; may need to wire to Formspree, Netlify Forms, or similar (since we're static) |
-
----
-
-## Phase 5: Growth Work (LATER)
-
-| # | Item | Notes |
-|---|---|---|
-| 5.1 | Citation cleanup — NAP consistency | Verify name/address/phone match on BBB ✓, Yelp, Houzz, Angi, Thumbtack |
-| 5.2 | Get more real photos for in-floor heating + trim-finishing | Ask David; add to those 2 service pages once received |
-| 5.3 | Review acquisition campaign | Email past customers asking for Google reviews; target 10+ to lift the GBP listing |
-| 5.4 | Add `sitemap.xml` and `robots.txt` | ✅ Done 2026-05-16 (commit `587770d`). 22 URLs, currently absolute to `densanon-devs.github.io/dcbconstructionllc`; regenerate with find/replace at custom-domain cutover |
-| 5.5 | Service+city combo pages for additional services | Walk-in showers, tile installation are the next-most-searched. 3 cities × 2 services = 6 more potential pages |
-| 5.6 | Before/after sliders on gallery | Once we have before/after pairs from real projects |
-
----
-
-## Skipped (intentionally)
-
-- **Blog** — net-negative SEO for a small contractor without time to write real posts. Removed 2026-05-08
-- **WP install migration** — running pirated PRO Elements, on Quality Resource's host. Abandoning entirely once cutover happens
-- **Live chat / chatbot** — overkill for a one-person contractor
-- **Online quote builder** — too generic to be useful at this volume; in-person consult is already the offered process
-
----
-
-## Budget Considerations
-
-| Phase | Cost so far | Notes |
-|---|---|---|
-| Phase 1 | $0 | Pure labor — content extraction and triage |
-| Phase 2 | $0 | Pure labor — static site build |
-| Phase 3 | ~$0 (or ~$10 backup domain) | Domain transfer at Cloudflare = $0 markup, just renews at registry rate (~$10/yr). Backup domain only if needed |
-| Phase 4 | $0 | GitHub Pages is free; GA4 + Search Console free |
-| Phase 5 | Variable | Depends on whether citations need paid services or manual cleanup |
-
-Compared to Quality Resource's monthly retainer (which David was paying for years), the new arrangement runs at ~$10/yr for the domain plus David's time on content updates. No recurring vendor cost.
-
----
-
-## Success Metrics (target snapshot for 2027-05-08, 1 year out)
-
-| Metric | Baseline (now) | 6-month target | 12-month target |
+| # | Item | Status | Notes |
 |---|---|---|---|
-| Domain controlled by David | No (QR's Cloudflare account) | Yes | Yes |
-| Google Business Profile owned by David | No | Yes | Yes |
-| Google reviews | (unknown current count) | 15+ | 30+ |
-| Monthly organic search traffic | (no analytics yet) | 200+/mo | 500+/mo |
-| Lead form submissions / month | (no tracking yet) | 5+ | 12+ |
-| Phone call volume / month | (unknown) | track via GA4 + call tracking | track |
+| 0.1 | **Google Analytics 4** | ❌ Not started | No `gtag`, GTM, or any analytics on any page. Verified 2026-09-12. Blocked on David creating the GA4 property and handing over the `G-XXXXXXXXXX`. |
+| 0.2 | **Search Console verification + sitemap submission** | ❌ Not started | No verification meta tag on the site. Jordan can claim a fresh property with his own token — Quality Resource's old `google-site-verification` TXT is still in the Cloudflare zone but is not ours. |
+
+**Why this is P0:** the redirect repair shipped 2026-08-11 to fix the ~80% organic
+collapse, and **there is still no way to tell whether it worked.** No 404 report,
+no query data, no recovery curve, and no baseline for any metric in the table at
+the bottom of this file. Roughly 20 minutes of work unblocks all of it.
+
+### P1 — Content depth
+
+| # | Item | Status | Notes |
+|---|---|---|---|
+| 1.1 | Trim & finish carpentry photos | ⏳ Requested from David 2026-09-09 | Zero project photos exist. Page currently borrows a shower photo. |
+| 1.2 | More in-floor heating photos | 🟡 Partly solved | Four genuine radiant-heat photos were already on the site miscategorised under flooring; they now form a real gallery on the service page. Still no finished-floor-with-thermostat shot. |
+| 1.3 | Kitchen photos | ⏳ Requested from David 2026-09-09 | Only 2 kitchen photos for a headline service. |
+| 1.4 | Athol + Sandpoint area pages | 🔴 Deliberately deferred | Their old URLs cross-redirect to Hayden/CDA. **Do not build these until there is real, town-specific material** — two more thin area pages would recreate the doorway problem that was just fixed. |
+
+### P2 — Citations and reputation
+
+| # | Item | Status |
+|---|---|---|
+| 2.1 | NAP consistency audit — Yelp, Houzz, Angi, Thumbtack | ⏳ Not started |
+| 2.2 | Review acquisition campaign, target 10+ new Google reviews | ⏳ Not started |
+| 2.3 | Before/after sliders | ⏳ Blocked — needs matched before/after pairs |
+
+---
+
+## Completed
+
+### 2026-09-12 — SEO repair pass
+
+- **Doorway content fixed.** The six service+city pages were 91% word-identical
+  at worst. Rewritten with genuinely city-specific bodies and FAQ sets:
+
+  | Group | Before (worst pair) | After |
+  |---|---|---|
+  | walk-in-showers × 3 cities | 91% | **45%** |
+  | tile-installation × 3 cities | 91% | **42%** |
+
+  Both now sit below the kitchen/bathroom combo pages (36–40%) that were the
+  model to copy. Differentiation is by housing stock and what it actually means
+  for the job — older Coeur d'Alene stock and cast-iron waste lines, Post Falls
+  production builds and flatness tolerance, larger Hayden master baths, linear
+  drains and heated floor.
+
+- **Fabricated project claims removed.** The "differentiating" paragraph on each
+  of those pages asserted work in specifically named neighbourhoods
+  ("the Honeysuckle area", "Q'emiln Park", "Sanders Beach", "Fernan Lake
+  Village"). Those were invented at build time. Three more instances were found
+  on pages outside the original six and removed too. Housing-stock description
+  is factual and was kept; claims of completed projects in named neighbourhoods
+  are gone. See the real-content rule — this is the same failure class as the
+  stock photos.
+
+- **Fireplace tile page built** at `services/fireplace-tile-installation.html`.
+  `/fireplace-tile-installation/` was its own ranking URL under WordPress and had
+  been redirecting to the generic tile page while **23 real fireplace photos**
+  — the largest photo set on the site — went unused. The page carries all 23,
+  six fireplace-specific FAQs with schema, and content on clearances and hearth
+  requirements. The redirect stub now points at it, it is linked from the
+  services hub and the tile page, and it is in the sitemap.
+
+- **Contact form added** — see the caveat below. There was no `<form>` element
+  anywhere on the site; the contact page offered only `tel:` and `mailto:`.
+
+- **In-floor heating gallery** — four genuine radiant-heat photos promoted onto
+  the service page.
+
+- **WebP backlog item closed as a non-issue.** The "10 JPGs still lack WebP
+  siblings" item was wrong. All ten re-encode *larger* as WebP because they are
+  already-compressed small JPEGs; the only wins are at q60–68, which would
+  visibly degrade an already-artefacted source. Correctly left alone.
+
+### 2026-09-09 — Photo provenance
+
+Five stock photos from Quality Resource's March 2026 filler batch removed
+(`bathroom-04/05/06/07`, `walkin-shower-01`) and replaced with 12 photos David
+sent, all carrying genuine capture EXIF. Gallery showers 4 → 10.
+
+### 2026-08-11 — Traffic collapse repair
+
+21 WordPress redirect stubs, nav and footer baked static, titles and meta
+descriptions brought into range, JSON-LD repaired. All verified still live.
+
+### 2026-05 — Recovery, rebuild, takeover, cutover
+
+Content extracted from the vendor WordPress install, static site rebuilt, domain
+transferred to Porkbun, DNS moved to Cloudflare, GitHub Pages cutover, Google
+Business Profile claimed, HTTPS enforced, sitemap and robots.txt live.
+
+Verified live 2026-09-12: HTTPS enforced (301 http→https), www → apex 301,
+`sitemap.xml` 200 with 31 URLs, `robots.txt` 200, WordPress redirect stubs
+resolving.
+
+---
+
+## ⚠️ Contact form needs one manual step
+
+The form posts to **FormSubmit.co**, which requires no account but **must be
+activated once before it will deliver anything**:
+
+1. Submit the form once from the live site.
+2. FormSubmit emails `Dcbconstructionllccda@gmail.com` an activation link.
+3. David clicks it. From then on submissions arrive in his inbox.
+
+**Until that happens, submissions are not delivered** and the visitor sees a
+FormSubmit confirmation-required page. Do the test submission promptly.
+
+To switch providers instead, change the single `action` attribute in
+`contact.html`. The form fields, honeypot, `_next` redirect to `thank-you.html`
+and styling are provider-agnostic.
+
+---
+
+## Skipped, and why — do not re-add
+
+- **Review / AggregateRating markup.** Google does not honour self-serving review
+  markup for LocalBusiness or Organization. Local stars come from the Google
+  Business Profile, not from on-site JSON-LD. An audit pass suggested this; it
+  was rejected deliberately.
+- **Blog.** Removed 2026-05-08. It was six fake teaser cards and two
+  AI-generated articles. Net-negative for a contractor with no time to write.
+- **WordPress migration.** The old install ran pirated Elementor Pro on the
+  vendor's host. Abandoned entirely.
+- **Live chat, chatbot, online quote builder.** Overkill at this volume; the
+  in-person consult is the offered process.
+
+---
+
+## Success metrics
+
+Baselines cannot be established until 0.1 and 0.2 land. Target snapshot one year
+from the original engagement:
+
+| Metric | Baseline | 12-month target |
+|---|---|---|
+| Domain controlled by David | ✅ Yes | Yes |
+| Google Business Profile owned | ✅ Yes | Yes |
+| Google reviews | unknown | 30+ |
+| Monthly organic traffic | **unmeasurable — no analytics** | 500+/mo |
+| Lead form submissions | **0 — no form existed until 2026-09-12** | 12+/mo |

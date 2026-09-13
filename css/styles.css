@@ -1521,3 +1521,88 @@ picture {
     transition: none;
   }
 }
+
+/* ============================================
+   Lead form (contact page)
+   ============================================ */
+
+.lead-form {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.lead-form .hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-field {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.form-field .req { color: var(--color-accent-dark); }
+
+.lead-form input,
+.lead-form select,
+.lead-form textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  background: var(--color-off-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 0.9rem;
+  width: 100%;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.lead-form textarea { resize: vertical; min-height: 120px; }
+
+.lead-form input:focus,
+.lead-form select:focus,
+.lead-form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.18);
+}
+
+.lead-form input:invalid:not(:placeholder-shown),
+.lead-form textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--color-error);
+}
+
+.lead-form button[type="submit"] { margin-top: 0.25rem; }
+
+.form-note {
+  margin: 1rem 0 0;
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+}
+
+@media (max-width: 640px) {
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .lead-form { padding: 1.5rem 1.15rem; }
+}
