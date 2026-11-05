@@ -102,3 +102,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+/* Lead tracking for Google Analytics (GA4). Counts phone taps, email taps and
+   contact-form submissions (FormSubmit redirects to thank-you.html). */
+(function () {
+  function track(name, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (!a) return;
+    var isTel = a.getAttribute('href').indexOf('tel:') === 0;
+    track(isTel ? 'phone_call_click' : 'email_click', { link_url: a.getAttribute('href'), page_path: location.pathname });
+  });
+  if (/\/thank-you(\.html)?$/.test(location.pathname)) track('generate_lead', { form: 'contact' });
+})();
