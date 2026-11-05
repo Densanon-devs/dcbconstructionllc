@@ -9,3 +9,7 @@ posts-index.json
 category-sitemap.xml
 local-sitemap.xml
 page-sitemap.xml
+
+# Project docs and build scripts. Everything tracked in this repo is published
+# by GitHub Pages, so internal material stays out of it.
+internal/
