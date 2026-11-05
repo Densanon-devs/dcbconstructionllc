@@ -104,8 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* Lead tracking for Google Analytics (GA4). Phone taps are counted by the
-   click_to_call hook above; this adds email taps and contact-form submissions
-   (FormSubmit redirects to thank-you.html). */
+   click_to_call hook above, and form submissions by the GA key event
+   contact_form_lead (page_view of thank-you.html, configured in GA). */
 (function () {
   function track(name, params) {
     if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
@@ -114,5 +114,4 @@ document.addEventListener('DOMContentLoaded', function () {
     var a = e.target.closest && e.target.closest('a[href^="mailto:"]');
     if (a) track('email_click', { page_path: location.pathname });
   });
-  if (/\/thank-you(\.html)?$/.test(location.pathname)) track('generate_lead', { form: 'contact' });
 })();
